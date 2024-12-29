@@ -3,21 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Adventure</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <link href="style/style.css" rel="stylesheet" />
+
+    <title>Portfolio | Adventure</title>
   </head>
   <body>
     <header>
       <div class="logo">
         <h1>Li</h1>
       </div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home Page</a></li>
+      <nav id="desktop-nav">
+        <ul class="nav-links">
+          <li><a href="./index.html">Home</a></li>
           <li>
             <a href="about.html">About</a>
             <ul>
-              <li><a href="about.html#skills">Skills</a></li>
-              <li><a href="about.html#education">Education</a></li>
+              <li><a href="about.html#about">Skills</a></li>
+              <li><a href="about.html#about-skills">Education</a></li>
               <li><a href="about.html#hobbies">Hobbies</a></li>
             </ul>
           </li>
@@ -47,152 +54,327 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
+
+      <nav id="hamburger-nav">
+        <div class="hamburger-menu">
+          <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="menu-links">
+            <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+            <li>
+              <a href="about.html" onclick="toggleSubMenu(this)">About</a>
+              <ul class="submenu">
+                <li>
+                  <a href="about.html#skills" onclick="toggleMenu()">Skills</a>
+                </li>
+                <li>
+                  <a href="about.html#education" onclick="toggleMenu()"
+                    >Education</a
+                  >
+                </li>
+                <li>
+                  <a href="about.html#hobbies" onclick="toggleMenu()"
+                    >Hobbies</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="interest.html" onclick="toggleSubMenu(this)">Interest</a>
+              <ul class="submenu">
+                <li>
+                  <a href="interest.html#art" onclick="toggleMenu()">Art</a>
+                </li>
+                <li>
+                  <a href="interest.html#space" onclick="toggleMenu()">Space</a>
+                </li>
+                <li>
+                  <a href="interest.html#books" onclick="toggleMenu()">Books</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="adventure.html" onclick="toggleSubMenu(this)"
+                >Adventure</a
+              >
+              <ul class="submenu">
+                <li>
+                  <a href="adventure.html#travel" onclick="toggleMenu()"
+                    >Travel</a
+                  >
+                </li>
+                <li>
+                  <a href="adventure.html#experience" onclick="toggleMenu()"
+                    >Experience</a
+                  >
+                </li>
+                <li>
+                  <a href="adventure.html#exciting" onclick="toggleMenu()"
+                    >Exciting Projects</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li><a href="resume.html" onclick="toggleMenu()">Resume</a></li>
+            <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
-    <section id="travel" class="travel">
-      <h2>Dream Travel Destinations</h2>
-      <div class="travel-intro">
-        <p>
-          I've never been outside Ethiopia, but the world is full of incredible
-          places I'd love to explore in the future. Here are some of my dream
-          destinations!
-        </p>
-        <img src="images/travel2.webp" alt="Travel Avatar" />
-      </div>
-      <div class="gallery">
-        <div class="gallery-card">
-          <img src="images/paris.jpg" alt="Eiffel Tower, Paris" />
-          <p>Paris, France - The City of Light</p>
+    <section id="travel">
+      <p class="section__text__p1">Dream Destinations</p>
+      <h1 class="title">Travel</h1>
+      <div class="travel-content">
+        <div class="travel-intro">
+          <p>
+            I've never been outside Ethiopia, but the world is full of
+            incredible places I'd love to explore in the future. Here are some
+            of my dream destinations!
+          </p>
         </div>
-        <div class="gallery-card">
-          <img src="images/japan.jpg" alt="Tokyo Skyline" />
-          <p>Tokyo, Japan - A Fusion of Tradition and Innovation</p>
-        </div>
-        <div class="gallery-card">
-          <img src="images/newyork.jpg" alt="New York City" />
-          <p>New York City, USA - The City That Never Sleeps</p>
-        </div>
-        <div class="gallery-card">
-          <img src="images/maldives.jpg" alt="Maldives Beaches" />
-          <p>Maldives - A Tropical Paradise</p>
-        </div>
-        <div class="gallery-card">
-          <img src="images/safrica.jpg" alt="Table Mountain, Cape Town" />
-          <p>Cape Town, South Africa - Natural Beauty and Culture</p>
-        </div>
-        <div class="gallery-card">
-          <img src="images/sydney.jpg" alt="Sydney Opera House" />
-          <p>Sydney, Australia - Iconic Landmarks and Beaches</p>
-        </div>
-        <div class="gallery-card">
-          <img src="images/korea.jpg" alt="Seoul, South Korea" />
-          <p>Seoul, South Korea - Vibrant Culture and Stunning Skyscrapers</p>
-        </div>
-        <div class="gallery-card">
-          <img src="images/bali.jpg" alt="Bali, Indonesia" />
-          <p>Bali, Indonesia - Tropical Paradise with Temples and Beaches</p>
+
+        <div class="gallery-container">
+          <div class="scroll-arrow left-arrow" id="scroll-left">
+            <i class="fas fa-chevron-left"></i>
+          </div>
+
+          <div class="gallery">
+            <div class="gallery-card">
+              <img src="images/paris.jpg" alt="Eiffel Tower, Paris" />
+              <p>Paris, France - The City of Light</p>
+            </div>
+            <div class="gallery-card">
+              <img src="images/japan.jpg" alt="Tokyo Skyline" />
+              <p>Tokyo, Japan - A Fusion of Tradition and Innovation</p>
+            </div>
+            <div class="gallery-card">
+              <img src="images/newyork.jpg" alt="New York City" />
+              <p>New York City, USA - The City That Never Sleeps</p>
+            </div>
+            <div class="gallery-card">
+              <img src="images/maldives.jpg" alt="Maldives Beaches" />
+              <p>Maldives - A Tropical Paradise</p>
+            </div>
+            <div class="gallery-card">
+              <img src="images/safrica.jpg" alt="Table Mountain, Cape Town" />
+              <p>Cape Town, South Africa - Natural Beauty and Culture</p>
+            </div>
+            <div class="gallery-card">
+              <img src="images/sydney.jpg" alt="Sydney Opera House" />
+              <p>Sydney, Australia - Iconic Landmarks and Beaches</p>
+            </div>
+            <div class="gallery-card">
+              <img src="images/korea.jpg" alt="Seoul, South Korea" />
+              <p>
+                Seoul, South Korea - Vibrant Culture and Stunning Skyscrapers
+              </p>
+            </div>
+            <div class="gallery-card">
+              <img src="images/bali.jpg" alt="Bali, Indonesia" />
+              <p>
+                Bali, Indonesia - Tropical Paradise with Temples and Beaches
+              </p>
+            </div>
+          </div>
+
+          <div class="scroll-arrow right-arrow" id="scroll-right">
+            <i class="fas fa-chevron-right"></i>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="experience" class="experience">
-      <h2>Experience</h2>
+      <p class="section__text__p1">My ...</p>
+      <h1 class="title">Experience</h1>
 
-      <table>
-        <caption>
-          UI/UX Design
-        </caption>
-        <tr>
-          <th>Skill</th>
-          <th>Details</th>
-        </tr>
-        <tr>
-          <td>Wireframing</td>
-          <td>
-            2 years experience creating wireframes using Figma and Adobe XD.
-          </td>
-        </tr>
-        <tr>
-          <td>Prototyping</td>
-          <td>Designed interactive prototypes for client presentations.</td>
-        </tr>
-        <tr>
-          <td>User Testing</td>
-          <td>Conducted usability testing to improve user interfaces.</td>
-        </tr>
-      </table>
+      <div class="experience-grid">
+        <table class="experience-table">
+          <caption>
+            UI/UX Design
+          </caption>
+          <tr>
+            <th>Skill</th>
+            <th>Detail</th>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="images/checkmark.png"
+                alt="Wireframing Icon"
+                class="bullet-icon"
+              />
+              Wireframing
+            </td>
+            <td>
+              2 years experience creating wireframes using Figma and Adobe XD.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="images/checkmark.png"
+                alt="Prototyping Icon"
+                class="bullet-icon"
+              />
+              Prototyping
+            </td>
+            <td>Designed interactive prototypes for client presentations.</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="images/checkmark.png"
+                alt="Testing Icon"
+                class="bullet-icon"
+              />
+              User Testing
+            </td>
+            <td>Conducted usability testing to improve user interfaces.</td>
+          </tr>
+        </table>
 
-      <table>
-        <caption>
-          Python Programming
-        </caption>
-        <tr>
-          <th>Skill</th>
-          <th>Details</th>
-        </tr>
-        <tr>
-          <td>Data Analysis</td>
-          <td>
-            2 years experience analyzing datasets with Pandas and Matplotlib.
-          </td>
-        </tr>
-        <tr>
-          <td>Web Development</td>
-          <td>Developed backend systems using Django and Flask.</td>
-        </tr>
-        <tr>
-          <td>Automation</td>
-          <td>Built scripts to automate repetitive tasks.</td>
-        </tr>
-      </table>
+        <table class="experience-table">
+          <caption>
+            Python Programming
+          </caption>
+          <tr>
+            <th>Skill</th>
+            <th>Details</th>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="images/checkmark.png"
+                alt="Data Analysis Icon"
+                class="bullet-icon"
+              />
+              Data Analysis
+            </td>
+            <td>
+              2 years experience analyzing datasets with Pandas and Matplotlib.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="images/checkmark.png"
+                alt="Web Development Icon"
+                class="bullet-icon"
+              />
+              Web Development
+            </td>
+            <td>Developed backend systems using Django and Flask.</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="images/checkmark.png"
+                alt="Automation Icon"
+                class="bullet-icon"
+              />
+              Automation
+            </td>
+            <td>Built scripts to automate repetitive tasks.</td>
+          </tr>
+        </table>
 
-      <table>
-        <caption>
-          Angular and React
-        </caption>
-        <tr>
-          <th>Skill</th>
-          <th>Details</th>
-        </tr>
-        <tr>
-          <td>Frontend Development</td>
-          <td>1.5 years experience building responsive SPAs.</td>
-        </tr>
-        <tr>
-          <td>State Management</td>
-          <td>Worked with Redux and RxJS for efficient state management.</td>
-        </tr>
-        <tr>
-          <td>Component Design</td>
-          <td>Designed and implemented reusable UI components.</td>
-        </tr>
-      </table>
+        <table class="experience-table">
+          <caption>
+            Angular and React
+          </caption>
+          <tr>
+            <th>Skill</th>
+            <th>Details</th>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="images/checkmark.png"
+                alt="Frontend Icon"
+                class="bullet-icon"
+              />
+              Frontend Development
+            </td>
+            <td>1.5 years experience building responsive SPAs.</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="images/checkmark.png"
+                alt="State Management Icon"
+                class="bullet-icon"
+              />
+              State Management
+            </td>
+            <td>Worked with Redux and RxJS for efficient state management.</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="images/checkmark.png"
+                alt="Component Icon"
+                class="bullet-icon"
+              />
+              Component Design
+            </td>
+            <td>Designed and implemented reusable UI components.</td>
+          </tr>
+        </table>
 
-      <table>
-        <caption>
-          Linux Systems
-        </caption>
-        <tr>
-          <th>Skill</th>
-          <th>Details</th>
-        </tr>
-        <tr>
-          <td>Server Management</td>
-          <td>2 years managing Linux servers for web hosting.</td>
-        </tr>
-        <tr>
-          <td>Scripting</td>
-          <td>Automated tasks using Bash and Python.</td>
-        </tr>
-        <tr>
-          <td>Networking</td>
-          <td>Configured and maintained network settings on Linux.</td>
-        </tr>
-      </table>
+        <table class="experience-table">
+          <caption>
+            Linux Systems
+          </caption>
+          <tr>
+            <th>Skill</th>
+            <th>Details</th>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="images/checkmark.png"
+                alt="Server Management Icon"
+                class="bullet-icon"
+              />
+              Server Management
+            </td>
+            <td>2 years managing Linux servers for web hosting.</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="images/checkmark.png"
+                alt="Scripting Icon"
+                class="bullet-icon"
+              />
+              Scripting
+            </td>
+            <td>Automated tasks using Bash and Python.</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="images/checkmark.png"
+                alt="Networking Icon"
+                class="bullet-icon"
+              />
+              Networking
+            </td>
+            <td>Configured and maintained network settings on Linux.</td>
+          </tr>
+        </table>
+      </div>
     </section>
 
     <section id="exciting" class="exciting-projects">
-      <h2>Exciting Projects</h2>
+      <p class="section__text__p1">Dive into</p>
+      <h1 class="title">Exciting Projects</h1>
+
       <div class="exciting-projects-container">
         <div class="project-card">
           <img src="images/work2.png" alt="Project 1" />
@@ -211,39 +393,41 @@
         Visit GitHub
       </button>
     </section>
-
     <footer>
-      <p>&copy; 2024 Portfolio. All rights reserved.</p>
       <div class="social-links">
         <a href="https://facebook.com" target="_blank">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+            src="https://www.edigitalagency.com.au/wp-content/uploads/Facebook-icon-white-PNG-large-size.png"
             alt="Facebook"
-            width="30"
+            class="social-icon"
           />
         </a>
         <a href="https://linkedin.com" target="_blank">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+            src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/linkedin-app-white-icon.png"
             alt="LinkedIn"
-            width="30"
+            class="social-icon"
           />
         </a>
         <a href="https://github.com" target="_blank">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
+            src="https://img.icons8.com/m_rounded/512/FFFFFF/github.png"
             alt="GitHub"
-            width="30"
+            class="social-icon"
           />
         </a>
         <a href="https://instagram.com" target="_blank">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+            src="https://static.vecteezy.com/system/resources/previews/019/874/344/non_2x/instagram-apps-icon-free-png.png"
             alt="Instagram"
-            width="30"
+            class="social-icon"
           />
         </a>
       </div>
+      <p>
+        &copy; 2024 Portfolio Designed By Liyat Tesfaye. All rights reserved.
+      </p>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>

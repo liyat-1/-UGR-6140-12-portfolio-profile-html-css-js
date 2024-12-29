@@ -3,21 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Resume</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <link href="style/style.css" rel="stylesheet" />
+
+    <title>Portfolio | Resume</title>
+    <style></style>
   </head>
   <body>
     <header>
       <div class="logo">
         <h1>Li</h1>
       </div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home Page</a></li>
+      <nav id="desktop-nav">
+        <ul class="nav-links">
+          <li><a href="./index.html">Home</a></li>
           <li>
             <a href="about.html">About</a>
             <ul>
-              <li><a href="about.html#skills">Skills</a></li>
-              <li><a href="about.html#education">Education</a></li>
+              <li><a href="about.html#about">Skills</a></li>
+              <li><a href="about.html#about-skills">Education</a></li>
               <li><a href="about.html#hobbies">Hobbies</a></li>
             </ul>
           </li>
@@ -47,25 +55,97 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
+
+      <nav id="hamburger-nav">
+        <div class="hamburger-menu">
+          <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="menu-links">
+            <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+            <li>
+              <a href="about.html" onclick="toggleSubMenu(this)">About</a>
+              <ul class="submenu">
+                <li>
+                  <a href="about.html#skills" onclick="toggleMenu()">Skills</a>
+                </li>
+                <li>
+                  <a href="about.html#education" onclick="toggleMenu()"
+                    >Education</a
+                  >
+                </li>
+                <li>
+                  <a href="about.html#hobbies" onclick="toggleMenu()"
+                    >Hobbies</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="interest.html" onclick="toggleSubMenu(this)">Interest</a>
+              <ul class="submenu">
+                <li>
+                  <a href="interest.html#art" onclick="toggleMenu()">Art</a>
+                </li>
+                <li>
+                  <a href="interest.html#space" onclick="toggleMenu()">Space</a>
+                </li>
+                <li>
+                  <a href="interest.html#books" onclick="toggleMenu()">Books</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="adventure.html" onclick="toggleSubMenu(this)"
+                >Adventure</a
+              >
+              <ul class="submenu">
+                <li>
+                  <a href="adventure.html#travel" onclick="toggleMenu()"
+                    >Travel</a
+                  >
+                </li>
+                <li>
+                  <a href="adventure.html#experience" onclick="toggleMenu()"
+                    >Experience</a
+                  >
+                </li>
+                <li>
+                  <a href="adventure.html#exciting" onclick="toggleMenu()"
+                    >Exciting Projects</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li><a href="resume.html" onclick="toggleMenu()">Resume</a></li>
+            <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
     <section id="github">
-      <h2>Check Out My GitHub</h2>
+      <p class="section__text__p1">Check Out My</p>
+      <h1 class="title">GitHub</h1>
       <p>
         Explore my GitHub repository to see the projects I've been working on,
         showcasing my skills and passion for coding. From creative web designs
-        to innovative solutions, it’s all here!
+        to innovative solutions, it's all here!
       </p>
       <div class="github-container">
         <div class="github-collage">
           <div class="image-image">
-            <img src="images/liyat-github.jpg" alt="liyat-github" />
+            <img src="images/liyat-github.jpg" alt="Liyat GitHub Image" />
           </div>
         </div>
+
         <div class="github-link">
-          <div class="image-image">
-            <img src="images/github.jpg" alt="GitHub Profile Link" />
-          </div>
+          <a href="https://github.com/liyat-1" target="_blank"
+            >Visit My GitHub</a
+          >
         </div>
+
         <div class="github-image">
           <img src="images/git.jpg" alt="Your GitHub Section Image" />
         </div>
@@ -73,121 +153,189 @@
     </section>
 
     <section id="projects">
-      <h2>Projects</h2>
-      <p>
-        Dive into some of the exciting projects and achievements I've worked on.
-        Below is a curated selection of my recent works, showcasing my skills,
-        creativity, and dedication. Check them out on GitHub!
+      <p class="section__text__p1">Check Out My</p>
+      <h1 class="title">Projects</h1>
+      <p class="long-text">
+        Explore my journey through some of the exciting projects and
+        achievements I've been a part of. Below, you'll find a curated selection
+        of my recent works, showcasing my skills, creativity, and dedication.
+        Take a look!
       </p>
 
-      <div class="projects">
-        <div class="project-item">
+      <div class="works">
+        <div class="work-item">
           <p>Tropical Travel Web UI Design</p>
-          <img src="images/work1.jpg" alt="Tropical Travel Web UI Design" />
-          <a
-            href="https://github.com/yourusername/tropical-travel-ui"
-            class="btn"
-            >View on GitHub</a
-          >
+          <img src="images/work1.jpg" alt="Work 1 Image" />
+          <div class="btn-container">
+            <a
+              href="https://github.com/yourgithubusername/project"
+              class="btn github-btn"
+              >GitHub</a
+            >
+            <a
+              href="https://www.figma.com/proto/P13uWgQnKpxVQ2muYkuMTa/Tropical?page-id=0%3A1&node-id=174-4&node-type=frame&viewport=-526%2C183%2C0.19&t=ITDO5gC6hKGGyLG7-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=174%3A4"
+              class="btn demo-btn"
+              >Live Demo</a
+            >
+          </div>
         </div>
-        <div class="project-item">
+        <div class="work-item">
           <p>EMCCMO For Ethiopian Musicians Royalty</p>
-          <img src="images/work2.png" alt="EMCCMO Project" />
-          <a href="https://ememrc.com/" class="btn">View on GitHub</a>
+          <img src="images/work2.png" alt="Work 2 Image" />
+          <div class="btn-container">
+            <a
+              href="https://github.com/yourgithubusername/project"
+              class="btn github-btn"
+              >GitHub</a
+            >
+            <a href="https://ememrc.com/" class="btn demo-btn">Live Demo</a>
+          </div>
         </div>
-        <div class="project-item">
+        <div class="work-item">
           <p>Apple Vision Pro UI Design</p>
-          <img src="images/work3.jpg" alt="Apple Vision Pro UI Design" />
-          <a
-            href="https://www.figma.com/proto/lBpwEqpKXPyzTRD8ydjzNX/Untitled?page-id=0%3A1&node-id=80-21&node-type=frame&viewport=158%2C312%2C0.05&t=qYJJSCYVS5YQmOwX-1&scaling=contain&content-scaling=responsive"
-            class="btn"
-            >View on GitHub</a
-          >
+          <img src="images/work3.jpg" alt="Work 2 Image" />
+          <div class="btn-container">
+            <a
+              href="https://github.com/yourgithubusername/project"
+              class="btn github-btn"
+              >GitHub</a
+            >
+            <a
+              href="https://www.figma.com/proto/lBpwEqpKXPyzTRD8ydjzNX/Untitled?page-id=0%3A1&node-id=80-21&node-type=frame&viewport=158%2C312%2C0.05&t=qYJJSCYVS5YQmOwX-1&scaling=contain&content-scaling=responsive"
+              class="btn demo-btn"
+              >Live Demo</a
+            >
+          </div>
         </div>
-        <div class="project-item">
+        <div class="work-item">
           <p>Tom Ford Product Display Website</p>
-          <img src="images/work4.jpg" alt="Tom Ford Product Display Website" />
-          <a
-            href="https://github.com/liyat-1/Assessment1_LiyatTesfaye_Section2"
-            class="btn"
-            >View on GitHub</a
-          >
+          <img src="images/work4.jpg" alt="Work 3 Image" />
+          <div class="btn-container">
+            <a
+              href="https://github.com/yourgithubusername/project"
+              class="btn github-btn"
+              >GitHub</a
+            >
+            <a href="https://tomford.netlify.app/" class="btn demo-btn"
+              >Live Demo</a
+            >
+          </div>
         </div>
-        <div class="project-item">
+        <div class="work-item">
           <p>Music Player</p>
-          <img src="images/work5.png" alt="Music Player Project" />
-          <a href="https://github.com/liyat-1/Disco" class="btn"
-            >View on GitHub</a
-          >
+          <img src="images/work5.png" alt="Work 3 Image" />
+          <div class="btn-container">
+            <a
+              href="https://github.com/yourgithubusername/project"
+              class="btn github-btn"
+              >GitHub</a
+            >
+            <a href="https://whenwedisco.netlify.app/" class="btn demo-btn"
+              >Live Demo</a
+            >
+          </div>
         </div>
-        <div class="project-item">
+        <div class="work-item">
           <p>Abol Coffee Shop and Center Static Web</p>
-          <img src="images/work6.png" alt="Abol Coffee Shop Website" />
-          <a href="https://github.com/liyat-1/Abol-coffee" class="btn"
-            >View on GitHub</a
-          >
+          <img src="images/work6.png" alt="Work 3 Image" />
+          <div class="btn-container">
+            <a
+              href="https://github.com/yourgithubusername/project"
+              class="btn github-btn"
+              >GitHub</a
+            >
+            <a href="https://abolcoffee.netlify.app/" class="btn demo-btn"
+              >Live Demo</a
+            >
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="cv">
-      <h2>CV/Resume</h2>
-      <p>
-        Discover my expertise and accomplishments at a glance. Click below to
-        download and check out my CV/Resume!
-      </p>
-      <img src="images/cv-image.webp" alt="CV Image" />
-      <a
-        href="file/Liyat_Tesfaye_CV.pdf"
-        class="btn"
-        download="Liyat_Tesfaye_CV.pdf"
-        >Download CV</a
-      >
-      <a href="resume.html" class="btn" role="button">Checkout Resume</a>
+    <section id="cv" class="resume">
+      <p class="section__text__p1">Check Out My</p>
+      <h1 class="title">CV/Resume</h1>
+
+      <div class="cv-container">
+        <div class="cv-image-container">
+          <img src="images/cv-image.webp" alt="CV Image" />
+        </div>
+
+        <div class="cv-content-container">
+          <p>
+            Discover my expertise and accomplishments at a glance. Click below
+            to download and check out my CV/Resume!
+          </p>
+
+          <a
+            href="file/Liyat_Tesfaye_CV.pdf"
+            class="btn"
+            download="Liyat_Tesfaye_CV.pdf"
+            >Download CV</a
+          >
+          <a href="resume.html" class="btn" role="button">Checkout Resume</a>
+        </div>
+      </div>
     </section>
 
     <section id="contact">
-      <div class="contact-grid">
-        <div class="image">
-          <img src="images/contact-image.webp" alt="Contact" />
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./images/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:examplemail@gmail.com">Example@gmail.com</a></p>
         </div>
-        <form>
-          <input type="text" placeholder="Name" required />
-          <input type="email" placeholder="Email" required />
-          <textarea placeholder="Message" rows="5" required></textarea>
-          <button type="submit" class="btn">Submit</button>
-        </form>
+        <div class="contact-info-container">
+          <img
+            src="./images/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+        </div>
       </div>
     </section>
 
     <footer>
-      <p>&copy; 2024 Portfolio. All rights reserved.</p>
       <div class="social-links">
         <a href="https://facebook.com" target="_blank">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+            src="https://www.edigitalagency.com.au/wp-content/uploads/Facebook-icon-white-PNG-large-size.png"
             alt="Facebook"
+            class="social-icon"
           />
         </a>
         <a href="https://linkedin.com" target="_blank">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+            src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/linkedin-app-white-icon.png"
             alt="LinkedIn"
+            class="social-icon"
           />
         </a>
         <a href="https://github.com" target="_blank">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
+            src="https://img.icons8.com/m_rounded/512/FFFFFF/github.png"
             alt="GitHub"
+            class="social-icon"
           />
         </a>
         <a href="https://instagram.com" target="_blank">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+            src="https://static.vecteezy.com/system/resources/previews/019/874/344/non_2x/instagram-apps-icon-free-png.png"
             alt="Instagram"
+            class="social-icon"
           />
         </a>
       </div>
+      <p>
+        &copy; 2024 Portfolio Designed By Liyat Tesfaye. All rights reserved.
+      </p>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -3,21 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Interests</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <link href="style/style.css" rel="stylesheet" />
+    <title>Portfolio | Interest</title>
   </head>
   <body>
     <header>
       <div class="logo">
         <h1>Li</h1>
       </div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home Page</a></li>
+      <nav id="desktop-nav">
+        <ul class="nav-links">
+          <li><a href="./index.html">Home</a></li>
           <li>
             <a href="about.html">About</a>
             <ul>
-              <li><a href="about.html#skills">Skills</a></li>
-              <li><a href="about.html#education">Education</a></li>
+              <li><a href="about.html#about">Skills</a></li>
+              <li><a href="about.html#about-skills">Education</a></li>
               <li><a href="about.html#hobbies">Hobbies</a></li>
             </ul>
           </li>
@@ -47,23 +53,99 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
+
+      <nav id="hamburger-nav">
+        <div class="hamburger-menu">
+          <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="menu-links">
+            <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+            <li>
+              <a href="about.html" onclick="toggleSubMenu(this)">About</a>
+              <ul class="submenu">
+                <li>
+                  <a href="about.html#skills" onclick="toggleMenu()">Skills</a>
+                </li>
+                <li>
+                  <a href="about.html#education" onclick="toggleMenu()"
+                    >Education</a
+                  >
+                </li>
+                <li>
+                  <a href="about.html#hobbies" onclick="toggleMenu()"
+                    >Hobbies</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="interest.html" onclick="toggleSubMenu(this)">Interest</a>
+              <ul class="submenu">
+                <li>
+                  <a href="interest.html#art" onclick="toggleMenu()">Art</a>
+                </li>
+                <li>
+                  <a href="interest.html#space" onclick="toggleMenu()">Space</a>
+                </li>
+                <li>
+                  <a href="interest.html#books" onclick="toggleMenu()">Books</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="adventure.html" onclick="toggleSubMenu(this)"
+                >Adventure</a
+              >
+              <ul class="submenu">
+                <li>
+                  <a href="adventure.html#travel" onclick="toggleMenu()"
+                    >Travel</a
+                  >
+                </li>
+                <li>
+                  <a href="adventure.html#experience" onclick="toggleMenu()"
+                    >Experience</a
+                  >
+                </li>
+                <li>
+                  <a href="adventure.html#exciting" onclick="toggleMenu()"
+                    >Exciting Projects</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li><a href="resume.html" onclick="toggleMenu()">Resume</a></li>
+            <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
     <main>
+      <div class="art-intro">
+        <p class="section__text__p1">Explore My Interest</p>
+        <h1 class="title">Art</h1>
+      </div>
       <section id="art" class="hero">
         <div class="art-part1">
-          <div class="image-container">
-            <img src="images/art-image1.jfif" alt="Art representation" />
+          <div class="col-1">
+            <div class="image-container">
+              <img src="images/art-image1.jfif" alt="Art representation" />
+            </div>
+            <div class="image-container">
+              <img src="images/art-image2.jfif" alt="Art representation" />
+            </div>
           </div>
-
-          <div class="image-container">
-            <img src="images/art-image2.jfif" alt="Art representation" />
-          </div>
-
-          <div class="image-container">
-            <img src="images/art-image3.jfif" alt="Art representation" />
+          <div class="col-2">
+            <div class="image-container">
+              <img src="images/art-image3.jfif" alt="Art representation" />
+            </div>
           </div>
         </div>
+
         <div class="art-part2">
           <div class="text">
             <p>
@@ -72,87 +154,99 @@
               collections that inspire and captivate me.
             </p>
           </div>
+
           <div class="bottom">
             <div class="image-container">
-              <img src="images/art-image4.jfif" alt="Art description" />
+              <img src="images/art-image5.jpg" alt="Art description" />
             </div>
           </div>
         </div>
       </section>
-
+      <div class="art-intro">
+        <p class="section__text__p1">Space</p>
+        <h1 class="title">A Journey Beyond</h1>
+      </div>
       <section id="space">
-        <h2>Space: A Journey Beyond</h2>
-        <div class="space-part1">
-          <div class="video-container">
-            <video controls>
-              <source src="videos/video1.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+        <div class="space-row">
+          <div class="space-column space-part1">
+            <div class="video-container">
+              <video muted loop autoplay>
+                <source src="videos/video1.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+
+          <div class="space-column space-part2">
+            <p>
+              Space has always fascinated humanity, with its vastness and
+              mysteries waiting to be uncovered. It reminds us of our small yet
+              significant place in the universe, inspiring exploration and
+              curiosity. Discover the wonders of space through the video and
+              insights below.
+            </p>
+            <button class="btn btn-color-1">Read More</button>
+          </div>
+
+          <div class="space-column space-part3">
+            <table class="space-table">
+              <tr>
+                <td class="table-cell">
+                  <div class="space-image-container">
+                    <img
+                      src="images/space-image1.jfif"
+                      alt="A stunning galaxy"
+                    />
+                  </div>
+                </td>
+                <td class="table-cell">
+                  <p>
+                    Galaxies swirl in the endless void, painting the universe
+                    with brilliance and color.
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td class="table-cell">
+                  <p>
+                    Nebulas showcase the beauty of star formation, where chaos
+                    gives birth to light.
+                  </p>
+                </td>
+                <td class="table-cell">
+                  <div class="space-image-container">
+                    <img
+                      src="images/space-image2.jfif"
+                      alt="A mesmerizing nebula"
+                    />
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="table-cell">
+                  <div class="video-container">
+                    <video muted loop autoplay>
+                      <source src="videos/video2.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </td>
+                <td class="table-cell">
+                  <p>
+                    Star clusters illuminate the sky, revealing the unity of
+                    countless celestial bodies.
+                  </p>
+                </td>
+              </tr>
+            </table>
           </div>
         </div>
-        <div class="space-part2">
-          <p>
-            Space has always fascinated humanity, with its vastness and
-            mysteries waiting to be uncovered. It reminds us of our small yet
-            significant place in the universe, inspiring exploration and
-            curiosity. Discover the wonders of space through the video and
-            insights below.
-          </p>
-          <button>Read More</button>
-        </div>
-        <div class="space-part3">
-          <table>
-            <tr>
-              <td>
-                <div class="image-container">
-                  <img src="images/space-image1.jfif" alt="A stunning galaxy" />
-                </div>
-              </td>
-              <td>
-                <p>
-                  Galaxies swirl in the endless void, painting the universe with
-                  brilliance and color.
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p>
-                  Nebulas showcase the beauty of star formation, where chaos
-                  gives birth to light.
-                </p>
-              </td>
-              <td>
-                <div class="image-container">
-                  <img
-                    src="images/space-image2.jfif"
-                    alt="A mesmerizing nebula"
-                  />
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div class="video-container">
-                  <video muted controls>
-                    <source src="videos/video2.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-              </td>
-              <td>
-                <p>
-                  Star clusters illuminate the sky, revealing the unity of
-                  countless celestial bodies.
-                </p>
-              </td>
-            </tr>
-          </table>
-        </div>
       </section>
-
+      <div class="art-intro">
+        <p class="section__text__p1">Books</p>
+        <h1 class="title">Windows to Other Worlds</h1>
+      </div>
       <section id="books">
-        <h2>Books: Windows to Other Worlds</h2>
         <div class="book-cards">
           <div class="book-card">
             <div class="image-container">
@@ -162,7 +256,7 @@
               *The Three-Body Problem* by Liu Cixin explores humanity's response
               to an impending alien invasion, blending science and philosophy.
             </p>
-            <button>Read Book</button>
+            <button class="btn btn-color-2">Read Book</button>
           </div>
           <div class="book-card">
             <div class="image-container">
@@ -172,7 +266,7 @@
               Dostoevsky's *The Idiot* is a profound tale of love, morality, and
               the struggle for goodness in a flawed world.
             </p>
-            <button>Read Book</button>
+            <button class="btn btn-color-1">Read Book</button>
           </div>
           <div class="book-card">
             <div class="image-container">
@@ -182,44 +276,47 @@
               Emily Brontë's *Wuthering Heights* is a timeless story of passion,
               vengeance, and the haunting power of love.
             </p>
-            <button>Read Book</button>
+            <button class="btn btn-color-2">Read Book</button>
           </div>
         </div>
       </section>
     </main>
 
     <footer>
-      <p>&copy; 2024 Portfolio. All rights reserved.</p>
       <div class="social-links">
         <a href="https://facebook.com" target="_blank">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+            src="https://www.edigitalagency.com.au/wp-content/uploads/Facebook-icon-white-PNG-large-size.png"
             alt="Facebook"
-            width="30"
+            class="social-icon"
           />
         </a>
         <a href="https://linkedin.com" target="_blank">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+            src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/linkedin-app-white-icon.png"
             alt="LinkedIn"
-            width="30"
+            class="social-icon"
           />
         </a>
         <a href="https://github.com" target="_blank">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
+            src="https://img.icons8.com/m_rounded/512/FFFFFF/github.png"
             alt="GitHub"
-            width="30"
+            class="social-icon"
           />
         </a>
         <a href="https://instagram.com" target="_blank">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+            src="https://static.vecteezy.com/system/resources/previews/019/874/344/non_2x/instagram-apps-icon-free-png.png"
             alt="Instagram"
-            width="30"
+            class="social-icon"
           />
         </a>
       </div>
+      <p>
+        &copy; 2024 Portfolio Designed By Liyat Tesfaye. All rights reserved.
+      </p>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>

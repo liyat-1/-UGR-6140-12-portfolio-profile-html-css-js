@@ -3,21 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <link href="style/style.css" rel="stylesheet" />
+
+    <title>Portfolio | Contact</title>
+    <style></style>
   </head>
   <body>
     <header>
       <div class="logo">
         <h1>Li</h1>
       </div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home Page</a></li>
+      <nav id="desktop-nav">
+        <ul class="nav-links">
+          <li><a href="./index.html">Home</a></li>
           <li>
             <a href="about.html">About</a>
             <ul>
-              <li><a href="about.html#skills">Skills</a></li>
-              <li><a href="about.html#education">Education</a></li>
+              <li><a href="about.html#about">Skills</a></li>
+              <li><a href="about.html#about-skills">Education</a></li>
               <li><a href="about.html#hobbies">Hobbies</a></li>
             </ul>
           </li>
@@ -47,24 +55,104 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
+
+      <nav id="hamburger-nav">
+        <div class="hamburger-menu">
+          <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="menu-links">
+            <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+            <li>
+              <a href="about.html" onclick="toggleSubMenu(this)">About</a>
+              <ul class="submenu">
+                <li>
+                  <a href="about.html#skills" onclick="toggleMenu()">Skills</a>
+                </li>
+                <li>
+                  <a href="about.html#education" onclick="toggleMenu()"
+                    >Education</a
+                  >
+                </li>
+                <li>
+                  <a href="about.html#hobbies" onclick="toggleMenu()"
+                    >Hobbies</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="interest.html" onclick="toggleSubMenu(this)">Interest</a>
+              <ul class="submenu">
+                <li>
+                  <a href="interest.html#art" onclick="toggleMenu()">Art</a>
+                </li>
+                <li>
+                  <a href="interest.html#space" onclick="toggleMenu()">Space</a>
+                </li>
+                <li>
+                  <a href="interest.html#books" onclick="toggleMenu()">Books</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="adventure.html" onclick="toggleSubMenu(this)"
+                >Adventure</a
+              >
+              <ul class="submenu">
+                <li>
+                  <a href="adventure.html#travel" onclick="toggleMenu()"
+                    >Travel</a
+                  >
+                </li>
+                <li>
+                  <a href="adventure.html#experience" onclick="toggleMenu()"
+                    >Experience</a
+                  >
+                </li>
+                <li>
+                  <a href="adventure.html#exciting" onclick="toggleMenu()"
+                    >Exciting Projects</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li><a href="resume.html" onclick="toggleMenu()">Resume</a></li>
+            <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
     <section id="contact">
-      <div class="contact-grid">
-        <div class="image">
-          <img src="images/contact-image.webp" alt="Contact" />
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./images/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:examplemail@gmail.com">Example@gmail.com</a></p>
         </div>
-        <form>
-          <input type="text" placeholder="Name" required />
-          <input type="email" placeholder="Email" required />
-          <textarea placeholder="Message" rows="5" required></textarea>
-          <button type="submit" class="btn">Submit</button>
-        </form>
+        <div class="contact-info-container">
+          <img
+            src="./images/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+        </div>
       </div>
     </section>
 
     <section id="skills">
-      <h2>Skills</h2>
+      <p class="section__text__p1">For the Following</p>
+      <h1 class="title">Skills</h1>
+
       <div class="skills">
         <div class="skill-item">
           <img src="images/angular.png" alt="Skill 1 Image" />
@@ -85,53 +173,55 @@
       </div>
       <div class="text">
         <p>
-          For these projects, if you need help, please feel free to contact me.
+          For these set of skills, if you need help, please feel free to
+          <span>contact me</span>.
         </p>
       </div>
-    </section>
-
-    <section id="resume-container">
-      <div class="resume-text">
-        <p>
-          For more information about me, my skills, and the projects I have
-          done, please check out my resume.
-        </p>
-        <a href="resume.html" class="btn">View Resume</a>
+      <div id="resume-container">
+        <div class="resume-text">
+          <p>
+            For more information about me, my skills, and the projects I have
+            done, please check out my resume.
+          </p>
+          <a href="resume.html" class="btn btn-color-2">View Resume</a>
+        </div>
       </div>
     </section>
-
     <footer>
-      <p>&copy; 2024 Portfolio. All rights reserved.</p>
       <div class="social-links">
         <a href="https://facebook.com" target="_blank">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+            src="https://www.edigitalagency.com.au/wp-content/uploads/Facebook-icon-white-PNG-large-size.png"
             alt="Facebook"
-            width="30"
+            class="social-icon"
           />
         </a>
         <a href="https://linkedin.com" target="_blank">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+            src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/linkedin-app-white-icon.png"
             alt="LinkedIn"
-            width="30"
+            class="social-icon"
           />
         </a>
         <a href="https://github.com" target="_blank">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
+            src="https://img.icons8.com/m_rounded/512/FFFFFF/github.png"
             alt="GitHub"
-            width="30"
+            class="social-icon"
           />
         </a>
         <a href="https://instagram.com" target="_blank">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+            src="https://static.vecteezy.com/system/resources/previews/019/874/344/non_2x/instagram-apps-icon-free-png.png"
             alt="Instagram"
-            width="30"
+            class="social-icon"
           />
         </a>
       </div>
+      <p>
+        &copy; 2024 Portfolio Designed By Liyat Tesfaye. All rights reserved.
+      </p>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>

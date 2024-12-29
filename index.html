@@ -7,8 +7,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-
-    <link href="style/style.css" rel="stylesheet" />
+    <link href="/src/style/style.css" rel="stylesheet" />
 
     <title>Portfolio | Home</title>
   </head>
@@ -21,37 +20,39 @@
         <ul class="nav-links">
           <li><a href="index.html" class="active">Home</a></li>
           <li>
-            <a href="about.html">About</a>
+            <a href="./src/about.html">About</a>
             <ul>
-              <li><a href="about.html#about">Skills</a></li>
-              <li><a href="about.html#about-skills">Education</a></li>
-              <li><a href="about.html#hobbies">Hobbies</a></li>
+              <li><a href="./src/about.html#about">Skills</a></li>
+              <li><a href="./src/about.html#about-skills">Education</a></li>
+              <li><a href="./src/about.html#hobbies">Hobbies</a></li>
             </ul>
           </li>
           <li>
-            <a href="interest.html">Interest</a>
+            <a href="./src/interest.html">Interest</a>
             <ul>
-              <li><a href="interest.html#art">Art</a></li>
-              <li><a href="interest.html#space">Space</a></li>
-              <li><a href="interest.html#books">Books</a></li>
+              <li><a href="./src/interest.html#art">Art</a></li>
+              <li><a href="./src/interest.html#space">Space</a></li>
+              <li><a href="./src/interest.html#books">Books</a></li>
             </ul>
           </li>
           <li>
-            <a href="adventure.html">Adventure</a>
+            <a href="./src/adventure.html">Adventure</a>
             <ul>
-              <li><a href="adventure.html#travel">Travel</a></li>
-              <li><a href="adventure.html#experience">Experience</a></li>
-              <li><a href="adventure.html#exciting">Exciting Projects</a></li>
+              <li><a href="./src/adventure.html#travel">Travel</a></li>
+              <li><a href="./src/adventure.html#experience">Experience</a></li>
+              <li>
+                <a href="./src/adventure.html#exciting">Exciting Projects</a>
+              </li>
             </ul>
           </li>
           <li class="last">
-            <a href="resume.html">Resume</a>
+            <a href="./src/resume.html">Resume</a>
             <ul>
-              <li><a href="resume.html#github">GitHub</a></li>
-              <li><a href="resume.html#projects">Projects</a></li>
+              <li><a href="./src/resume.html#github">GitHub</a></li>
+              <li><a href="./src/resume.html#projects">Projects</a></li>
             </ul>
           </li>
-          <li class="last"><a href="contact.html">Contact</a></li>
+          <li class="last"><a href="./src/contact.html">Contact</a></li>
         </ul>
       </nav>
 
@@ -65,61 +66,77 @@
           <ul class="menu-links">
             <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
             <li>
-              <a href="about.html" onclick="toggleSubMenu(this)">About</a>
+              <a href="./src/about.html" onclick="toggleSubMenu(this)">About</a>
               <ul class="submenu">
                 <li>
-                  <a href="about.html#skills" onclick="toggleMenu()">Skills</a>
+                  <a href="./src/about.html#skills" onclick="toggleMenu()"
+                    >Skills</a
+                  >
                 </li>
                 <li>
-                  <a href="about.html#education" onclick="toggleMenu()"
+                  <a href="./src/about.html#education" onclick="toggleMenu()"
                     >Education</a
                   >
                 </li>
                 <li>
-                  <a href="about.html#hobbies" onclick="toggleMenu()"
+                  <a href="./src/about.html#hobbies" onclick="toggleMenu()"
                     >Hobbies</a
                   >
                 </li>
               </ul>
             </li>
             <li>
-              <a href="interest.html" onclick="toggleSubMenu(this)">Interest</a>
+              <a href="./src/interest.html" onclick="toggleSubMenu(this)"
+                >Interest</a
+              >
               <ul class="submenu">
                 <li>
-                  <a href="interest.html#art" onclick="toggleMenu()">Art</a>
+                  <a href="./src/interest.html#art" onclick="toggleMenu()"
+                    >Art</a
+                  >
                 </li>
                 <li>
-                  <a href="interest.html#space" onclick="toggleMenu()">Space</a>
+                  <a href="./src/interest.html#space" onclick="toggleMenu()"
+                    >Space</a
+                  >
                 </li>
                 <li>
-                  <a href="interest.html#books" onclick="toggleMenu()">Books</a>
+                  <a href="./src/interest.html#books" onclick="toggleMenu()"
+                    >Books</a
+                  >
                 </li>
               </ul>
             </li>
             <li>
-              <a href="adventure.html" onclick="toggleSubMenu(this)"
+              <a href="./src/adventure.html" onclick="toggleSubMenu(this)"
                 >Adventure</a
               >
               <ul class="submenu">
                 <li>
-                  <a href="adventure.html#travel" onclick="toggleMenu()"
+                  <a href="./src/adventure.html#travel" onclick="toggleMenu()"
                     >Travel</a
                   >
                 </li>
                 <li>
-                  <a href="adventure.html#experience" onclick="toggleMenu()"
+                  <a
+                    href="./src/adventure.html#experience"
+                    onclick="toggleMenu()"
                     >Experience</a
                   >
                 </li>
                 <li>
-                  <a href="adventure.html#exciting" onclick="toggleMenu()"
+                  <a href="./src/adventure.html#exciting" onclick="toggleMenu()"
                     >Exciting Projects</a
                   >
                 </li>
               </ul>
             </li>
-            <li><a href="resume.html" onclick="toggleMenu()">Resume</a></li>
-            <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+            <li>
+              <a href="./src/resume.html" onclick="toggleMenu()">Resume</a>
+            </li>
+            <li>
+              <a href="./src/contact.html" onclick="toggleMenu()">Contact</a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -127,7 +144,10 @@
 
     <section id="hero">
       <div class="section__pic-container">
-        <img src="images/hero-image.png" alt="Hero Image of Liyat Tesfaye" />
+        <img
+          src="./src/images/hero-image.png"
+          alt="Hero Image of Liyat Tesfaye"
+        />
       </div>
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
@@ -136,18 +156,20 @@
           A passionate and professional Frontend Developer and UI/UX Designer.
         </p>
         <div class="btn-container">
-          <a href="about.html" class="btn btn-color-1">About Me</a>
-          <a href="resume.html" class="btn btn-color-2">Check Out My Resume</a>
+          <a href="./src/about.html" class="btn btn-color-1">About Me</a>
+          <a href="./src/resume.html" class="btn btn-color-2"
+            >Check Out My Resume</a
+          >
         </div>
         <div id="socials-container">
           <img
-            src="images/linkedin.png"
+            src="./src/images/linkedin.png"
             alt="My LinkedIn profile"
             class="icon"
             onclick="location.href='https://linkedin.com/'"
           />
           <img
-            src="images/github.png"
+            src="./src/images/github.png"
             alt="My Github profile"
             class="icon"
             onclick="location.href='https://github.com/'"
@@ -162,19 +184,19 @@
       <div class="skills-container">
         <div class="skills">
           <div class="skill-item">
-            <img src="images/angular.png" alt="Skill 1 Image" />
+            <img src="./src/images/angular.png" alt="Skill 1 Image" />
             <p>Angular</p>
           </div>
           <div class="skill-item">
-            <img src="images/linux.png" alt="Skill 2 Image" />
+            <img src="./src/images/linux.png" alt="Skill 2 Image" />
             <p>Linux</p>
           </div>
           <div class="skill-item">
-            <img src="images/python.png" alt="Skill 3 Image" />
+            <img src="./src/images/python.png" alt="Skill 3 Image" />
             <p>Python</p>
           </div>
           <div class="skill-item">
-            <img src="images/react.png" alt="Skill 4 Image" />
+            <img src="./src/images/react.png" alt="Skill 4 Image" />
             <p>React</p>
           </div>
         </div>
@@ -193,7 +215,7 @@
       <div class="works">
         <div class="work-item">
           <p>Tropical Travel Web UI Design</p>
-          <img src="images/work1.jpg" alt="Work 1 Image" />
+          <img src="./src/images/work1.jpg" alt="Work 1 Image" />
           <div class="btn-container">
             <a
               href="https://github.com/yourgithubusername/project"
@@ -209,7 +231,7 @@
         </div>
         <div class="work-item">
           <p>EMCCMO For Ethiopian Musicians Royalty</p>
-          <img src="images/work2.png" alt="Work 2 Image" />
+          <img src="./src/images/work2.png" alt="Work 2 Image" />
           <div class="btn-container">
             <a
               href="https://github.com/yourgithubusername/project"
@@ -221,7 +243,7 @@
         </div>
         <div class="work-item">
           <p>Apple Vision Pro UI Design</p>
-          <img src="images/work3.jpg" alt="Work 2 Image" />
+          <img src="./src/images/work3.jpg" alt="Work 2 Image" />
           <div class="btn-container">
             <a
               href="https://github.com/yourgithubusername/project"
@@ -237,7 +259,7 @@
         </div>
         <div class="work-item">
           <p>Tom Ford Product Display Website</p>
-          <img src="images/work4.jpg" alt="Work 3 Image" />
+          <img src="./src/images/work4.jpg" alt="Work 3 Image" />
           <div class="btn-container">
             <a
               href="https://github.com/yourgithubusername/project"
@@ -251,7 +273,7 @@
         </div>
         <div class="work-item">
           <p>Music Player</p>
-          <img src="images/work5.png" alt="Work 3 Image" />
+          <img src="./src/images/work5.png" alt="Work 3 Image" />
           <div class="btn-container">
             <a
               href="https://github.com/yourgithubusername/project"
@@ -265,7 +287,7 @@
         </div>
         <div class="work-item">
           <p>Abol Coffee Shop and Center Static Web</p>
-          <img src="images/work6.png" alt="Work 3 Image" />
+          <img src="./src/images/work6.png" alt="Work 3 Image" />
           <div class="btn-container">
             <a
               href="https://github.com/yourgithubusername/project"
@@ -285,7 +307,7 @@
 
       <div class="cv-container">
         <div class="cv-image-container">
-          <img src="images/cv-image.webp" alt="CV Image" />
+          <img src="./src/images/cv-image.webp" alt="CV Image" />
         </div>
 
         <div class="cv-content-container">
@@ -295,12 +317,14 @@
           </p>
 
           <a
-            href="file/Liyat_Tesfaye_CV.pdf"
+            href="./src/file/Liyat_Tesfaye_CV.pdf"
             class="btn"
             download="Liyat_Tesfaye_CV.pdf"
             >Download CV</a
           >
-          <a href="resume.html" class="btn" role="button">Checkout Resume</a>
+          <a href="./src/resume.html" class="btn" role="button"
+            >Checkout Resume</a
+          >
         </div>
       </div>
     </section>
@@ -311,7 +335,7 @@
       <div class="contact-info-upper-container">
         <div class="contact-info-container">
           <img
-            src="./images/email.png"
+            src="./src/images/email.png"
             alt="Email icon"
             class="icon contact-icon email-icon"
           />
@@ -319,7 +343,7 @@
         </div>
         <div class="contact-info-container">
           <img
-            src="./images/linkedin.png"
+            src="./src/images/linkedin.png"
             alt="LinkedIn icon"
             class="icon contact-icon"
           />
@@ -363,6 +387,6 @@
         &copy; 2024 Portfolio Designed By Liyat Tesfaye. All rights reserved.
       </p>
     </footer>
-    <script src="script.js"></script>
+    <script src="./src/script.js"></script>
   </body>
 </html>
